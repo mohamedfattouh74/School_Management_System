@@ -1,5 +1,6 @@
-# StudentManagementSystem
-A school management system created by Angular framework for the CRUD operations using simulated REST API created by Json-server. <br>
+# Student_Management_System
+A school management system created by Angular framework for the CRUD operations using simulated REST API created by Json-server. <br> 
+<br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
 
