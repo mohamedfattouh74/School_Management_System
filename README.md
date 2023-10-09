@@ -6,6 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Tools Used:
 * Angular
+* Angular Material
 * TypeScript
 * Tailwind CSS
 * JSON Server
