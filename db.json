@@ -1,0 +1,178 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Ahmed Yasser",
+      "score": "A",
+      "level": "Elementary",
+      "email": "ahmed@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Youssef Ahmed",
+      "score": "B-",
+      "level": "Middle",
+      "email": "youssef@gmail.com"
+    },
+    {
+      "name": "Ayman Adel Ahmed",
+      "email": "ayman@gmail.com",
+      "score": "A+",
+      "level": "Secondary",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Omar Khaled",
+      "score": "C+",
+      "level": "Secondary",
+      "email": "omar@gmail.com"
+    },
+    {
+      "name": "Zeiad Ahmed",
+      "email": "zeiad@gmail.com",
+      "score": "B",
+      "level": "Secondary",
+      "id": 5
+    },
+    {
+      "name": "Adel Adham",
+      "email": "adel@gmail.com",
+      "score": "A+",
+      "level": "Secondary",
+      "id": 6
+    },
+    {
+      "name": "Hazem Ahmed",
+      "email": "hazem@gmail.com",
+      "score": "A",
+      "level": "Elementary",
+      "id": 7
+    },
+    {
+      "name": "Mohamed Fathy",
+      "email": "mohamedfathy@gmail.com",
+      "score": "B+",
+      "level": "Elementary",
+      "id": 8
+    },
+    {
+      "name": "Marwan Mohamed Ahmed",
+      "email": "marwan@yahoo.com",
+      "score": "A",
+      "level": "Secondary",
+      "id": 9
+    },
+    {
+      "name": "Moataz Hossam",
+      "email": "moataz@gmail.com",
+      "score": "A",
+      "level": "Middle",
+      "id": 10
+    },
+    {
+      "name": "Ibrahim Ahmed",
+      "email": "ibrahim@gmail.com",
+      "score": "B+",
+      "level": "Elementary",
+      "id": 11
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Mohamed Adel Fattouh",
+      "salary": "120000",
+      "dateOfBirth": "2000-07-14T21:00:00.000Z",
+      "firstCourse": "Arabic",
+      "secondCourse": "Philosophy",
+      "id": 1
+    },
+    {
+      "name": "Mazen Ahmed",
+      "salary": "180000",
+      "dateOfBirth": "1999-02-02T22:00:00.000Z",
+      "firstCourse": "Communication",
+      "secondCourse": "Physics",
+      "id": 2
+    },
+    {
+      "name": "Omar Adel ",
+      "salary": "200000",
+      "dateOfBirth": "1996-06-15T21:00:00.000Z",
+      "firstCourse": "Math",
+      "secondCourse": "Physics",
+      "id": 3
+    },
+    {
+      "name": "Ayman Gamal Allam",
+      "salary": "250000",
+      "dateOfBirth": "1995-02-19T22:00:00.000Z",
+      "firstCourse": "Biology",
+      "secondCourse": "Chemistry",
+      "id": 4
+    }
+  ],
+  "courses": [
+    {
+      "title": "History 2",
+      "type": "Required",
+      "id": 1
+    },
+    {
+      "title": "Chemistry",
+      "type": "Required",
+      "id": 2
+    },
+    {
+      "title": "Physics",
+      "type": "Elective",
+      "id": 3
+    },
+    {
+      "title": "Philosophy",
+      "type": "Required",
+      "id": 4
+    },
+    {
+      "id": 6,
+      "title": "Biology",
+      "type": "Required"
+    },
+    {
+      "title": "Art",
+      "type": "Elective",
+      "id": 7
+    },
+    {
+      "title": "Math",
+      "type": "Required",
+      "id": 8
+    },
+    {
+      "title": "Communication",
+      "type": "Elective",
+      "id": 10
+    },
+    {
+      "title": "Math 2",
+      "type": "Required",
+      "id": 11
+    },
+    {
+      "title": "Arabic",
+      "type": "Required",
+      "id": 13
+    },
+    {
+      "title": "AI",
+      "type": "Required",
+      "id": 14
+    },
+    {
+      "title": "Humanities",
+      "type": "Elective",
+      "id": 15
+    }
+  ],
+  "users": []
+}

@@ -1,0 +1,91 @@
+<div
+  class="mt-8 border border-gray-100 rounded-xl w-1/3 mx-auto shadow-lg shadow-gray-500/50"
+>
+  <h1 class="text-xl bg-[#3f51b5] rounded-md text-center text-white p-4">
+    Edit Teacher
+  </h1>
+  <form [formGroup]="teacherEditForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field class="ms-6">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          placeholder="Enter Name"
+          formControlName="name"
+          [ngModel]="teacherToEdit.name"
+        />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="m-4">
+        <mat-label>Salary</mat-label>
+        <input
+          matInput
+          placeholder="Enter Salary"
+          formControlName="salary"
+          [ngModel]="teacherToEdit.salary"
+        />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field class="ms-6 mb-4 w-11/12">
+      <mat-label>Date of birth</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        formControlName="dateOfBirth"
+        [ngModel]="teacherToEdit.dateOfBirth"
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error>This field is required</mat-error>
+    </mat-form-field>
+    <br />
+
+    <div class="flex space-x-6 ms-6">
+      <div>
+        <mat-form-field>
+          <mat-label>First Course</mat-label>
+          <mat-select
+            formControlName="firstCourse"
+            [ngModel]="teacherToEdit.firstCourse"
+          >
+            <mat-option *ngFor="let course of courses" [value]="course.title">
+              {{ course.title }}
+            </mat-option>
+          </mat-select>
+          <mat-error>This field is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Second Course</mat-label>
+          <mat-select
+            formControlName="secondCourse"
+            [ngModel]="teacherToEdit.secondCourse"
+          >
+            <mat-option *ngFor="let course of courses" [value]="course.title">
+              {{ course.title }}
+            </mat-option>
+          </mat-select>
+          <mat-error>This field is required</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="m-4"
+      mat-raised-button
+      color="primary"
+      [disabled]="!teacherEditForm.valid"
+    >
+      Edit
+    </button>
+  </form>
+</div>

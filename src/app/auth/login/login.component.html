@@ -1,0 +1,47 @@
+<div
+  class="mt-8 border border-gray-100 rounded-xl w-1/3 mx-auto shadow-lg shadow-gray-500/50"
+>
+  <h1 class="text-xl bg-[#3f51b5] rounded-md text-center text-white p-4">
+    Sign in to your account
+  </h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field class="ms-6">
+        <mat-label>Username</mat-label>
+        <input
+          matInput
+          placeholder="Enter username"
+          formControlName="username"
+        />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="m-4">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Enter Password"
+          formControlName="password"
+          type="password"
+        />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="flex">
+      <button
+        type="submit"
+        class="m-4"
+        mat-raised-button
+        color="primary"
+        [disabled]="!loginForm.valid"
+      >
+        Sign in
+      </button>
+      <p class="text-center text-sm text-gray-500 pt-5">
+        No account?
+        <a class="underline" routerLink="/signup">Sign up</a>
+      </p>
+    </div>
+  </form>
+</div>

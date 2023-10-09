@@ -1,0 +1,77 @@
+<div class="w-full">
+  <table
+    class="min-w-full divide-y-2 divide-gray-200 bg-[#FCFCFC] text-sm border-b-2"
+  >
+    <thead class="ltr:text-left border-t-2">
+      <tr>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          ID
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Title
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Type
+        </th>
+        <th class="px-4 py-2 flex justify-end me-28">
+          <a
+            routerLink="add"
+            class="cursor-pointer inline-block rounded bg-indigo-600 px-6 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+          >
+            Add
+          </a>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody class="divide-y divide-gray-200">
+      <tr
+        *ngFor="
+          let course of courses
+            | paginate
+              : {
+                  itemsPerPage: tableSize,
+                  currentPage: page,
+                  totalItems: count
+                }
+        "
+      >
+        <td
+          class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-center"
+        >
+          {{ course.id }}
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-gray-900 text-center">
+          {{ course.title }}
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-gray-700 text-center">
+          {{ course.type }}
+        </td>
+
+        <td class="whitespace-nowrap px-4 py-2 flex justify-end mr-8">
+          <a
+            (click)="getCourseByID(course.id)"
+            routerLink="edit"
+            class="cursor-pointer inline-block rounded bg-indigo-600 mx-4 px-6 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+          >
+            Edit
+          </a>
+          <a
+            (click)="deleteCourse(course.id)"
+            class="cursor-pointer inline-block rounded bg-red-600 px-4 py-2 text-xs font-medium text-white hover:bg-red-700"
+          >
+            Delete
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="mt-4 ml-4">
+  <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChange($event)"
+  >
+  </pagination-controls>
+</div>

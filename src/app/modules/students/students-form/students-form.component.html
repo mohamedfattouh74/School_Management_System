@@ -1,0 +1,57 @@
+<div
+  class="mt-8 border border-gray-100 rounded-xl w-1/3 mx-auto shadow-lg shadow-gray-500/50"
+>
+  <h1 class="text-xl bg-[#3f51b5] rounded-md text-center text-white p-4">
+    New Student
+  </h1>
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field class="ms-6">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter Name" formControlName="name" />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="m-4">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter email" formControlName="email" />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="flex space-x-6 ms-6">
+      <div>
+        <mat-form-field>
+          <mat-label>Score</mat-label>
+          <mat-select formControlName="score">
+            <mat-option *ngFor="let score of score" [value]="score">
+              {{ score }}
+            </mat-option>
+          </mat-select>
+          <mat-error>This field is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Level</mat-label>
+          <mat-select formControlName="level">
+            <mat-option *ngFor="let level of levels" [value]="level">
+              {{ level }}
+            </mat-option>
+          </mat-select>
+          <mat-error>This field is required</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="m-4"
+      mat-raised-button
+      color="primary"
+      [disabled]="!studentForm.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
